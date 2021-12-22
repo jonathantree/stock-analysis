@@ -1,0 +1,54 @@
+Sub MacroCheck()
+
+    Dim testmessage As String
+    
+    testmessage = "Hello World"
+    
+    MsgBox (testmessage)
+
+End Sub
+
+
+Sub DQAnalysis()
+
+    'Activate sheets that the macro works in
+    Worksheets("DQ Analysis").Activate
+    
+    'use Range function to assign value to the cell A1
+    Range("A1").Value = "DAQO (Ticker: DQ)"
+    
+    'Creating header
+    Cells(3, 1).Value = "Year"
+    Cells(3, 2).Value = "Total Daily Volume"
+    Cells(3, 3).Value = "Return"
+    
+    'Create variables
+    rowStart = 2
+    
+    'rowEnd code taken from https://stackoverflow.com/questions/18088729/row-count-where-data-exists
+    rowEnd = Cells(Rows.Count, "A").End(xlUp).Row
+    totalVolume = 0
+       
+    Worksheets("2018").Activate
+    
+    'increase totalVolume
+    For i = rowStart To rowEnd
+    
+        If Cells(i, 1).Value = "DQ" Then
+        
+        totalVolume = totalVolume + Cells(i, 8).Value
+    
+    End If
+    
+
+    Next i
+    
+    MsgBox (totalVolume)
+    
+    'Output the results to the DQ Analysis worksheet
+    
+    Worksheets("DQ Analysis").Activate
+    Cells(4, 1).Value = 2018
+    Cells(4, 2).Value = totalVolume
+    
+End Sub
