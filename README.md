@@ -12,6 +12,14 @@
 
 ### Performance enhanced using refactored script
 
+**Table 1. Statistics of the refactored script and original over 100 iterations**
+
+| **Year**            | **Total Iterations** | **Total Time Elapsed** | **Average Run Time** | **s<sup>2</sup><sub>n-1</sub>**       |
+|-----------------|------------------|--------------------|------------------|-------------|
+| Refactored 2017 | 100              | 25.546875          | 0.25546875       | 0.019096325 |
+| Refactored 2018 | 100              | 25.21484375        | 0.252148438      | 0.026383425 |
+| Original 2017   | 100              | 143.140625         | 1.460618622      | 0.141026767 |
+| Original 2018   | 100              | 134.703125         | 1.374521684      | 0.176248114 |
 ## Summary
 
 1. What are the advantages or disadvantages of refactoring code?
