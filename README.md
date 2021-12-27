@@ -11,12 +11,17 @@ The original script that was written used a nested for loop in order to extract 
 ## Results
 
 ### Stock Performance between 2017 and 2018
+The analysis of stocks reveal that over all, most stocks had net gains during the year of 2017 and net losses during the year of 2018 Figures 1 & 2). During 2017, the two stocks with the highest return were DQ (199.4%) and SEDG (184.5%). The only stock with negative returns during 2017 was TERP, which remained negative in 2018. TERP was the only stock which showed negative returns for both years. The analysis of the returns from 2018 showed that DQ had the lowest return (-62.6%). The only stock which had positve year end returns for both 2017 and 2018 was ENPH. If Steve were to suggest an investment option for his parents based on these analyses, ENPH has the best investment potential. 
 
+**Figure 1. Bar chart of 2017 year end return**
+![2017 Year-end return chart](./Resources/2017_year_end_return_chart.png)
 
+**Figure 2. Bar chart of 2018 year end return**
+![2018 Year-end return chart](./Resources/2018_year_end_return_chart.png)
 
 ### Performance enhanced using refactored script
 
-**Figure 1. Line plot showing the performance of the refactored script vs the original over 100 iterations** 
+**Figure 3. Line plot showing the performance of the refactored script vs the original over 100 iterations** 
 ![Line plot performance](./Iteration_Time_Analysis/Refactored_vs_Original_iterationanalysisplot.png)
 
 **Table 1. Statistics of the refactored script and original over 100 iterations**
