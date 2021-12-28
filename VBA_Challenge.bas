@@ -1,3 +1,4 @@
+Attribute VB_Name = "Module2"
 Sub AllStocksAnalysisRefactored()
     
     'Initialize the timer variables
@@ -85,7 +86,7 @@ Sub AllStocksAnalysisRefactored()
 
                 tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
                  
-                'If the next rowâ€™s ticker doesnâ€™t match, increase the tickerIndex.
+                'If the next row’s ticker doesn’t match, increase the tickerIndex.
                 tickerIndex = tickerIndex + 1
                 
         End If
