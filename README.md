@@ -65,7 +65,7 @@ For i = 0 To 11
     
 Next i
 ```
-This nested loop is not needed. In this approach, the solution matrix storing the daily volume and year end return is dynamically changing its size throughout each change in the ticker resulting in a longer runtime. The average runtime for this script over the dataset was 1.37 seconds to 1.46 seconds for 2018 and 2017 respectively (Table 1; Figure 3.).
+This nested loop is not needed. In this approach, the solution matrix storing the daily volume and year end return is dynamically changing its size throughout each change in the ticker resulting in a longer runtime. The average runtime for this script over the dataset was 1.37 seconds to 1.46 seconds for 2018 and 2017 respectively (Table 1; Figure 3).
 
 The approach to refactoring this script is to initialize a solution array which then stores results (step 1a in the comments of the follwing code), thus eliminating the need for the first loop in the original script. This was done by using a ```tickerIndex``` which was used to index stored data from the ```ticker```, ```tickerVolumes```, ```tickerStartingPrices```, and ```tickerEndingPrices```.  For example, to store the volume for a given ticker, the following syntax is used: ``` tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value```
 At the end of each ticker, data is stored, and the ```ticvkerIndex``` is increased to retrieve the nest ticker within the ```tickers``` array. The logic in the refactored approach is as follows:
@@ -145,6 +145,10 @@ The refactored script was able to reduce the runtime of the original code by a f
 ## Summary
 
 1. What are the advantages or disadvantages of refactoring code?
-   - bndjasbgjs
+   - Advantages:
+     - The advantages of refactoring code in general is to reduce code "smell" such as code duplication, bugs redundant logic, and increase flexibility/adaptability for future         additions or varibale datasets. By refactoring code, one can improve performance, enahnce end product aesthetics, or simply design a code which is more readily understood       to a new developer who will adopt the code in the future. Code refactoring is also a necesary step in preparation for peer review. If refactoring code prior to submission       is done, there will be less of a chance of code smell being detected in the peer review process.
+   - Disadvantages: 
+     - The disadvantages of refactoring code in general relate mostly to deadline and funding limitations. For instance, if a delivery deadline is near, time is not well spent         on refactoring code as it is debugging and making sure that the original is in stable form. Also, if the cost of refactoring the code is higher than simply rewriting new         code which serves the desired purpose, it would not be recomended to refactor the code. Refactooring code can also introduce new bugs and make a larger mess of the               readability of the original, thus stable code which is understandable is also not recomended to be refactored. 
+     
 2. How do these pros and cons apply to refactoring the original VBA script?
    - nasdjkbfsdjk
